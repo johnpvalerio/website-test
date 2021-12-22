@@ -9,17 +9,20 @@
 	<script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/21113556.js"></script>
 	<!-- End of HubSpot Embed Code -->
 	
+	<p id="test"></p>
 	<script>
-		function getParameters() {
-			let urlString = window.location.search;
-			let paramString = urlString.split('?')[1];
-			let params_arr = paramString.split('&');
-			for(let i = 0; i < params_arr.length; i++) {
-			    let pair = params_arr[i].split('=');
-			    console.log("Key is:" + pair[0]);
-			    console.log("Value is:" + pair[1]);
-			}
-		    }
+	document.getElementById("test").innerHTML = getParameters()
+	function getParameters() {
+		let urlString = window.location.search;
+		let paramString = urlString.split('?')[1];
+		let params_arr = paramString.split('&');
+		for(let i = 0; i < params_arr.length; i++) {
+		    let pair = params_arr[i].split('=');
+		    console.log("Key is:" + pair[0]);
+		    console.log("Value is:" + pair[1]);
+		}
+		return "123"
+	    }
 	</script> 
 </body>
 </html>
